@@ -14,7 +14,7 @@ public class Main {
         Integer[] array2 = new Integer[n];
         Arrays.sort(array);
         for(int i=0;i<n;i++) {
-            array2[i] = array[i] + array[2*n-1];
+            array2[i] = array[i] + array[2*n -i -1];
         } 
         Arrays.sort(array2, Collections.reverseOrder());
         System.out.println(array2[0]);
