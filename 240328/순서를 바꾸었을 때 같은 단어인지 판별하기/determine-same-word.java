@@ -11,16 +11,20 @@ public class Main {
         Arrays.sort(ch1);
         Arrays.sort(ch2);
         int k = 0;
-        for(int i=0;i<str1.length();i++) {
-            if(ch1[i]!=ch2[i]){
-                System.out.println("No");
-                break;
-            } else {
-                k++;
+        if(str1.length() == str2.length()) {
+            for(int i=0;i<str1.length();i++) {
+                if(ch1[i]!=ch2[i]){
+                    System.out.println("No");
+                    break;
+                } else {
+                    k++;
+                }
             }
-        }
-        if(k == str1.length()) {
-            System.out.println("Yes");
+            if(k == str1.length()) {
+                System.out.println("Yes");
+            }
+        } else {
+            System.out.println("No");
         }
     }
 }
