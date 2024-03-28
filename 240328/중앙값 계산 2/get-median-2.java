@@ -9,10 +9,11 @@ public class Main {
 
         for(int i=0;i<n;i++) {
             arr[i] = sc.nextInt();
+            if(i%2 == 0) {
+                Arrays.sort(arr,0,i+1);
+                System.out.printf("%d ", arr[i/2]);
+            }
         }
-        Arrays.sort(arr);
-        for(int i=0;i<n;i+=2) {
-            System.out.printf("%d ", arr[i/2]);
-        }
+
     }
 }
