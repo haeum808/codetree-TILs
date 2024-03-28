@@ -1,4 +1,7 @@
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Collections;
+
 public class Main {
     public static class Region{
         String name;
@@ -29,6 +32,7 @@ public class Main {
             regions[i].addr = sc.next();
             regions[i].city = sc.next();
         }
+        Arrays.sort(regions, (a, b) -> a.name.compareTo(b.name));
         System.out.printf("name %s\n", regions[n-1].name);
         System.out.printf("addr %s\n", regions[n-1].addr);
         System.out.printf("city %s", regions[n-1].city);
