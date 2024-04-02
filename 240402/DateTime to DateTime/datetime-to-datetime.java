@@ -6,14 +6,22 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int c = sc.nextInt();
-        
-        if(a < 11)
+        int i=0;
+        if(a < 11) {
             System.out.println("-1");
-        if(a == 11 && b <11)
+            i = 1;
+        }
+        if(a == 11 && b <11) {
             System.out.println("-1");
-        if(a == 11 && b == 11 && c <11)
+            i = 1;
+        }
+        if(a == 11 && b == 11 && c <11) {
             System.out.println("-1");
-        int time = (a-11) * 1440 + (b-11) * 60 + (c-11);
-        System.out.println(time);
+            i = 1;
+        }
+        if (i == 0){
+            int time = (a-11) * 1440 + (b-11) * 60 + (c-11);
+            System.out.println(time);
+        }
     }
 }
