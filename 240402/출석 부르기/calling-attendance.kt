@@ -9,7 +9,9 @@ fun main() {
         println("John")
     } else if (number == 2) {
         println("Tom")
-    } else {
+    } else if (number == 3) {
         println("Paul")
+    } else {
+        println("Vacancy")
     }
 }
