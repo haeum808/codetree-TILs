@@ -5,13 +5,13 @@ fun main() {
 
     val m = sc.nextInt()
 
-    if (3 <= m && m <= 5) {
+    if (m in 3..5) {
         print("Spring")
-    } else if (6 <= m && 8 <= m) {
+    } else if (m in 6..8) {
         print("Summer")
-    } else if (9 <= m && 11 <= m) {
+    } else if (m in 9..11) {
         print("Fall")
-    } else {
+    } else if (m == 1 || m == 2 || m == 12) {
         print("Winter")
     }
 }
