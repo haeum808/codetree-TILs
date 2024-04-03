@@ -4,7 +4,7 @@ import kotlin.math.max
 fun main() {
     val sc = Scanner(System.`in`)
 
-    val numbers = sc.nextLine().split(" ").map { it.toInt() }
-    
+    val numbers = sc.nextLine().trim().split(" ").map { it.toInt() }
+
     print(numbers.max())
 }
