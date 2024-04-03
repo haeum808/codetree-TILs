@@ -6,7 +6,7 @@ fun main() {
     val (age1, gender1) = sc.nextLine().split(" ")
     val (age2, gender2) = sc.nextLine().split(" ")
 
-    if (age1 >= "19" && gender1 == "M" || age2 >= "19" && gender2 == "M") {
+    if (age1.toInt() >= 19 && gender1 == "M" || age2.toInt() >= 19 && gender2 == "M") {
         print(1)
     } else {
         print(0)
