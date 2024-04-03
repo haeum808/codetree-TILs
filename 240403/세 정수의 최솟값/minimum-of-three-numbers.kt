@@ -4,7 +4,15 @@ import kotlin.math.min
 fun main() {
     val sc = Scanner(System.`in`)
 
-    val numbers = sc.nextLine().split(" ").map { it.toInt() }
+    val a = sc.nextInt()
+    val b = sc.nextInt()
+    val c = sc.nextInt()
 
-    print(numbers.min())
+    if (c < a && c < b) {
+        print(c)
+    } else if (b < c && b < a) {
+        print(b)
+    } else {
+        print(a)
+    }
 }
