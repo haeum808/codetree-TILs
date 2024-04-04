@@ -5,7 +5,8 @@ fun main() {
 
     var (a, b) = sc.nextLine().trim().split(" ").map { it.toInt() }
 
-    print("0.")
+    print(a / b)
+    print(".")
     repeat(20) {
         print("${a * 10 / b}")
         a = a * 10 % b
