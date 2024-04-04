@@ -10,17 +10,23 @@ public class Main {
         String date = sc.next();
         int[] count = new int[] {0,0,0,0,0,0,0};
         int[] arr = new int[]{0, 31,29, 31, 30,31,30,31,31,30,31,30,31};
+        int i = 0;
         while(true) {
-            if(m1 == m2 && d1 == d2) 
+            if(m1 == m2 && d1 == d2) {
+                count[i]++;
                 break;
-            count[d1%7]++;
+            }
+            count[i++]++;
             d1++;
             if(d1 > arr[m1]) {
                 d1 = 1;
                 m1++;
             }
+            if(i > 6)
+                i = 0;
         }
-        if(date.equals("Mon")) {
+    
+        if (date.equals("Mon")) {
             System.out.println(count[0]);
         } else if(date.equals("Tue")) {
             System.out.println(count[1]);
@@ -35,6 +41,6 @@ public class Main {
         } else {
             System.out.println(count[6]);
         }
-         
+
     }
 }
