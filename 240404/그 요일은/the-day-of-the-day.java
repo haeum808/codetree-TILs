@@ -32,7 +32,7 @@ public class Main {
             System.out.println(count[4]);
         } else if(date.equals("Sat")) {
             System.out.println(count[5]);
-        } else if(date.equals("Sun")) {
+        } else {
             System.out.println(count[6]);
         }
          
