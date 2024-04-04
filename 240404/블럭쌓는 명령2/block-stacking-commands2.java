@@ -8,8 +8,8 @@ public class Main {
         
         int n = sc.nextInt();
         int k = sc.nextInt();
-        Integer[] arr = new Integer[n];
-        for(int i=0;i<n;i++) {
+        Integer[] arr = new Integer[n+1];
+        for(int i=0;i<=n;i++) {
             arr[i] = 0;
         }
         for(int i=0;i<k;i++) {
