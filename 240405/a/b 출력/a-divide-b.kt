@@ -8,7 +8,7 @@ fun main() {
     print("${a / b}.")
 
     if (a / b >= 1) {
-        a = a * 10 % b
+        a = a % b
     }
 
     repeat(20) {
