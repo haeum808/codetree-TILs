@@ -5,9 +5,9 @@ fun main() {
 
     val (a, b, c) = sc.nextLine().trim().split(" ").map { it.toInt() }
 
-    if ((a..b).any { c % it == 0 }) {
-        print("YES")
-    } else {
+    if ((a..b).any { it % c == 0 }) {
         print("NO")
+    } else {
+        print("YES")
     }
 }
