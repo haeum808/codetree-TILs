@@ -6,5 +6,9 @@ fun main() {
     val input = sc.nextLine().reversed()
     val count = sc.next().toInt()
 
-    print(input.slice(0..count - 1))
+    if (input.length < count) {
+        print(input)
+    } else {
+        print(input.slice(0..count - 1))
+    }
 }
