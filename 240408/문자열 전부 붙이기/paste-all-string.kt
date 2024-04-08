@@ -4,11 +4,8 @@ fun main() {
     val sc = Scanner(System.`in`)
 
     val n = sc.nextInt()
-    var str = ""
 
     repeat(n) {
-        str += sc.nextLine()
+        print(sc.next())
     }
-
-    print(str)
 }
