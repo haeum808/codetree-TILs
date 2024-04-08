@@ -16,7 +16,7 @@ fun main() {
                 count++
             } else {
                 if (i == 1) sb.append("${input[i - 1]}1")
-                sb.append("${input[i - 1]}$count")
+                else {sb.append("${input[i - 1]}$count")}
                 count = 1
             }
         }
