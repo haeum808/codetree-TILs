@@ -7,8 +7,8 @@ fun main() {
     val sb = StringBuilder()
 
     if (input.length == 1) {
-        print(2)
-        print("${input}1")
+        println(2)
+        println("${input}1")
     } else {
         var count = 1
         for (i in 1..input.length - 1) {
