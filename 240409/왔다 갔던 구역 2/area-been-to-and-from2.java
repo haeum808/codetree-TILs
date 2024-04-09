@@ -13,13 +13,13 @@ public class Main {
             int x = sc.nextInt();
             char dir = sc.next().charAt(0);
             if(dir =='R') {
-                for(int j=start;j<start+x;j++) {
+                for(int j=start+1;j<start+x;j++) {
                     arr[j]++;
                 }
                 start += x;
             }
             else {
-                for(int j=start;j>start-x;j--) {
+                for(int j=start-1;j>start-x;j--) {
                     arr[j]++;
                 }
                 start -= x;
