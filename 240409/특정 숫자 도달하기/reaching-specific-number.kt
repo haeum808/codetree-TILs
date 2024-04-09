@@ -17,5 +17,5 @@ fun main() {
         cnt++
     }
 
-    print("${sum} ${sum / cnt.toDouble()}")
+    print("${sum} ${"%.1f".format(sum / cnt.toDouble())}")
 }
