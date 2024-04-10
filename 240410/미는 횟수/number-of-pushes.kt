@@ -10,14 +10,14 @@ fun main() {
     while(cnt <= a.length - 1) {
         if (a == b) break
 
-        a = a.slice(1..a.length - 1) + a[0]
+        a = a.last() + a.slice(0..a.length - 2)
 
         cnt++
     }
 
-    if (cnt > a.length) {
-        print(-1)
-    } else {
+    if (cnt in 0..a.length - 1) {
         print(cnt)
+    } else {
+        print(-1)
     }
 }
