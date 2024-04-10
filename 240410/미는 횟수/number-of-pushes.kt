@@ -7,7 +7,7 @@ fun main() {
     val b = sc.next()
     var cnt = 0
 
-    while(cnt <= a.length) {
+    while(cnt <= a.length - 1) {
         if (a == b) break
 
         a = a.slice(1..a.length - 1) + a[0]
