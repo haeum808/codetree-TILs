@@ -4,6 +4,11 @@ fun main() {
     val sc = Scanner(System.`in`)
 
     val arr = arrayOf('L', 'E', 'B', 'R', 'O', 'S')
+    val result = arr.indexOf(sc.next()[0])
 
-    print("${arr.indexOf(sc.next()[0]) ?: "None"}")
+    if (result == -1) {
+        print("None")
+    } else {
+        print(result)
+    }
 }
