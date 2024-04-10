@@ -6,5 +6,6 @@ fun main() {
 
     val alphabet = sc.next()[0]
 
-    print("${(alphabet.toInt() + 1).toChar()}")
+    if (alphabet == 'z') print('a')
+    else print("${(alphabet.toInt() + 1).toChar()}")
 }
