@@ -6,7 +6,7 @@ fun main() {
     val arr = IntArray(11)
     var (a, b) = sc.nextLine().trim().split(" ").map { it.toInt() }
 
-    while (a >= 1) {
+    while (a > 1) {
         arr[a % b]++
         a /= b
     }
