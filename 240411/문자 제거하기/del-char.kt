@@ -10,7 +10,7 @@ fun main() {
 
         if (num >= str.length) {
             str = str.slice(0..str.length - 2)
-        } else if (num == 1) {
+        } else if (num == 0) {
             str = str.slice(1..str.length - 1)
         } else {
             str = str.slice(0..num - 1) + str.slice(num + 1..str.length - 1)
