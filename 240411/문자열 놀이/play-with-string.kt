@@ -8,8 +8,8 @@ fun main() {
 
     repeat(q) {
         val num = sc.nextInt()
-        val a = sc.next()[0]
-        val b = sc.next()[0]
+        val a = sc.next()
+        val b = sc.next()
 
         if (num == 1) {
             val temp = s["$a".toInt() - 1]
@@ -17,8 +17,8 @@ fun main() {
             s["$b".toInt() - 1] = temp
         } else {
             for (index in s.indices) {
-                if (s[index] == a) {
-                    s[index] = b
+                if (s[index] == a[0]) {
+                    s[index] = b[0]
                 }
             }
         }
