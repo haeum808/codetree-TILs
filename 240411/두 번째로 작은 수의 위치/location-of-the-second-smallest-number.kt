@@ -6,7 +6,7 @@ fun main() {
 
     val n = sc.nextInt()
     sc.nextLine()
-    val numbers = sc.nextLine().trim().split(" ").map { it.toInt() }.sorted()
+    val numbers = sc.nextLine().trim().split(" ").map { it.toInt() }
 
     var min = numbers.min()!!
 
