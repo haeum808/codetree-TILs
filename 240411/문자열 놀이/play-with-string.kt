@@ -12,9 +12,9 @@ fun main() {
         val b = sc.next()[0]
 
         if (num == 1) {
-            val temp = s[a - '0' - 1]
-            s[a - '0' - 1] = s[b - '0' - 1]
-            s[b - '0' - 1] = temp
+            val temp = s["$a".toInt() - 1]
+            s["$a".toInt() - 1] = s["$b".toInt() - 1]
+            s["$b".toInt() - 1] = temp
         } else {
             for (index in s.indices) {
                 if (s[index] == a) {
