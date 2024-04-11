@@ -1,4 +1,5 @@
 import java.util.Scanner
+import kotlin.math.min
 
 fun main() {
     val sc = Scanner(System.`in`)
@@ -6,10 +7,21 @@ fun main() {
     val n = sc.nextInt()
     sc.nextLine()
     val numbers = sc.nextLine().trim().split(" ").map { it.toInt() }.sorted()
-    
-    if (numbers.indexOf(numbers[1]) == numbers.lastIndexOf(numbers[1])) {
-        print(numbers.indexOf(numbers[1]) + 1)
-    } else {
-        print(-1)
+
+    var min = numbers.min()!!
+
+    for (number in numbers) {
+        if (number > min) {
+            min = number
+
+            if (numbers.indexOf(min) == numbers.lastIndexOf(min)) {
+                print(numbers.indexOf(min) + 1)
+            } else {
+                print(-1)
+            }
+            return
+        }
     }
+
+    print(-1)
 }
