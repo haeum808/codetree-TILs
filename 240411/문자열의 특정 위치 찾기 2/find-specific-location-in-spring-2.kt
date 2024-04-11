@@ -9,7 +9,7 @@ fun main() {
 
     for (i in strings.indices) {
         for (j in strings[i].indices) { 
-            if (strings[i][j] == 'a' && (j == 2 || j == 3)) {
+            if (strings[i][j] == input && (j == 2 || j == 3)) {
                 println(strings[i])
                 cnt++
                 break
