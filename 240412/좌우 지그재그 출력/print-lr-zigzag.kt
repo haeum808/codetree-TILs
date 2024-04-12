@@ -14,11 +14,10 @@ fun main() {
                 print("${num++} ")
             }
         } else {
-            num = (num - 1) * 2
+            num += n
             for (j in 1..n) {
-                print("${num + 1 - j} ")
+                print("${num - j} ")
             }
-            num++
         }
         println()
     }   
