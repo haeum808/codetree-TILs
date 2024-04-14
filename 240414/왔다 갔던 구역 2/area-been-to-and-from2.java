@@ -13,16 +13,15 @@ public class Main {
             int x = sc.nextInt();
             char dir = sc.next().charAt(0);
             if(dir =='R') {
-                for(int j=start;j<start+x;j++) {
+                for(int j=start; j<Math.min(start+x, 2000); j++) { // 배열 범위를 초과하지 않도록 수정
+                     arr[j]++;
+                }
+                start = Math.min(start + x, 2000); // start 위치 업데이트 시 배열 범위를 초과하지 않도록 수정
+            } else {
+                for(int j=start; j>Math.max(start-x, 0); j--) { // 배열 범위를 초과하지 않도록 수정
                     arr[j]++;
                 }
-                start += x;
-            }
-            else {
-                for(int j=start;j>start-x;j--) {
-                    arr[j]++;
-                }
-                start -= x;
+                start = Math.max(start - x, 0); // start 위치 업데이트 시 배열 범위를 초과하지 않도록 수정
             }
         }
         int count = 0;
