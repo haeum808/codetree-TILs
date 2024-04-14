@@ -15,6 +15,7 @@ fun fourBasicOperation(num1: Int, operator: String, num2: Int): String {
         "+" -> { "$num1 $operator $num2 = ${num1 + num2}" }
         "-" -> { "$num1 $operator $num2 = ${num1 - num2}" }
         "/" -> { "$num1 $operator $num2 = ${num1 / num2}" }
-        else -> { "$num1 $operator $num2 = ${num1 * num2}" }
+        "*" -> { "$num1 $operator $num2 = ${num1 * num2}" }
+        else -> { "False" }
     }
 }
