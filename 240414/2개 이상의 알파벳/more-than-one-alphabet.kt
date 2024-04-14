@@ -9,5 +9,5 @@ fun main() {
 }
 
 fun countTwo(a: String): Boolean {
-    return a.groupBy { it }.values.any { it.size >= 2 }
+    return a.toSet().size >= 2
 }
