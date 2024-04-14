@@ -2,6 +2,7 @@ import java.util.Scanner
 
 var n = 0
 var m = 0
+var result = 0
 
 fun main() {
     val sc = Scanner(System.`in`)
@@ -12,12 +13,12 @@ fun main() {
 
     change(a)
 
-    print(n)
+    print(result)
 }
 
 fun change(a: Array<Int>) {
-    while(m > 1) {
-        n += a[m - 1]
+    while(m >= 1) {
+        result += a[m - 1]
 
         if (m % 2 != 0) {
             m -= 1
