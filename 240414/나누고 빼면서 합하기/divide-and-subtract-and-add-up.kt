@@ -16,7 +16,7 @@ fun main() {
 }
 
 fun change(a: Array<Int>) {
-    while(m != 1) {
+    while(m > 1) {
         n += a[m - 1]
 
         if (m % 2 != 0) {
