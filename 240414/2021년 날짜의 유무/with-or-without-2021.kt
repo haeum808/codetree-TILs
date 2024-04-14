@@ -14,6 +14,8 @@ fun main() {
 }
 
 fun determin2021(month: Int, day: Int): Boolean {
+    if (month !in 1..12) return false
+
     return when(month) {
         1 -> { day in 1..31 }
         2 -> { day in 1..28 }
