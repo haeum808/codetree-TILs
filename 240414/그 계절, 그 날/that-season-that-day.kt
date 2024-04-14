@@ -12,8 +12,8 @@ fun main() {
 
 fun weather(year: Int, month: Int, day: Int): String {
     if (month == 2 && 
-        (year % 4 == 0 
-        || (year % 100 == 0 && year % 400 == 0))) {
+        (year % 4 == 0 && year % 100 != 0) 
+        || (year % 400 == 0)) {
             if (day in 1..29) { return "Winter" }
             else { return "-1" }
     } else if (month == 2) {
