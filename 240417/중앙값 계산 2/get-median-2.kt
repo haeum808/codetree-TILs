@@ -7,12 +7,12 @@ fun main() {
 
     val numbers = mutableListOf<Int>()
 
-    repeat(n) {
+    repeat(n) { index ->
         val number = sc.nextInt()
 
         numbers.add(number)
 
-        if (number % 2 != 0) {
+        if ((index + 1) % 2 != 0) {
             print("${numbers.sorted()[numbers.size / 2]} ")
         }
     }
