@@ -11,10 +11,9 @@ fun main() {
         val number = sc.nextInt()
 
         numbers.add(number)
-        numbers.sort()
 
         if (number % 2 != 0) {
-            print("${numbers[numbers.size / 2]} ")
+            print("${numbers.sorted()[numbers.size / 2]} ")
         }
     }
 }
