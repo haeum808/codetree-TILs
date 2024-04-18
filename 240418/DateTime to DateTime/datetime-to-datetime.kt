@@ -7,17 +7,12 @@ fun main() {
     val b = sc.nextInt()
     val c = sc.nextInt()
 
-    if (b < 11) {
-        print(-1)
-        return
-    }
-    if (b == 11 && c < 11) {
-        print(-1)
-        return
-    }
-
     val result1 = (11 * 24 * 60) + (11 * 60) + 11
     val result2 = (a * 24 * 60) + (b * 60) + c
 
-    print(result2 - result1)
+    if (result2 - result1 < 0) {
+        print(-1)
+    } else {
+        print(result2 - result1)
+    }
 }
