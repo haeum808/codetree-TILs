@@ -13,16 +13,16 @@ fun main() {
     val result2 = (1..m2 - 1).map { monthToDay(it) }.sum() + d2
 
     when (a) {
-        "Mon" -> result1 -= 0
-        "Tue" -> result1 -= 1
-        "Wed" -> result1 -= 2
-        "Thu" -> result1 -= 3
-        "Fri" -> result1 -= 4
-        "Sat" -> result1 -= 5
-        else -> result1 -= 6
+        "Mon" -> result1 += 0
+        "Tue" -> result1 += 1
+        "Wed" -> result1 += 2
+        "Thu" -> result1 += 3
+        "Fri" -> result1 += 4
+        "Sat" -> result1 += 5
+        else -> result1 += 6
     }
 
-    print((result2 - result1 + 1) / 7)
+    print((result2 - result1) / 7 + 1)
 }
 
 fun monthToDay(n: Int): Int {
