@@ -8,10 +8,10 @@ fun main() {
     val m2 = sc.nextInt()
     val d2 = sc.nextInt()
 
-    val result1 = (1..m1).map { calculateMonthOfDay(it) }.sum() + d1
-    val result2 = (1..m2).map { calculateMonthOfDay(it) }.sum() + d2
+    val result1 = (1..m1 - 1).map { calculateMonthOfDay(it) }.sum() + d1
+    val result2 = (1..m2 - 1).map { calculateMonthOfDay(it) }.sum() + d2
     
-    print(result2 - result1)
+    print(result2 - result1 + 1)
 }
 
 fun calculateMonthOfDay(n: Int): Int {
