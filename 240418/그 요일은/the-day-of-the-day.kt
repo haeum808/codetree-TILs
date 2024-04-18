@@ -21,8 +21,11 @@ fun main() {
         "Sat" -> result1 += 5
         else -> result1 += 6
     }
+    var result = (result2 - result1) / 7
 
-    print((result2 - result1) / 7 + 1)
+    if (result2 - result1 >= 0) result += 1
+
+    print(result)
 }
 
 fun monthToDay(n: Int): Int {
