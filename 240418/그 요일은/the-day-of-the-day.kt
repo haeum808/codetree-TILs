@@ -22,7 +22,7 @@ fun main() {
         else -> result1 -= 6
     }
 
-    print((result2 - result1) / 7)
+    print((result2 - result1 + 1) / 7)
 }
 
 fun monthToDay(n: Int): Int {
