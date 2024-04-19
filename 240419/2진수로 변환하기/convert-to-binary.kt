@@ -5,10 +5,10 @@ fun main() {
 
     var n = sc.nextInt()
     var cnt = 0
-    val arr = IntArray(20)
+    var result = ""
 
     while(true) {
-        arr[cnt++] = n % 2
+        result += n % 2
 
         if (n < 2) {
             break
@@ -17,5 +17,5 @@ fun main() {
         n /= 2
     }
 
-    print(arr.reversed().joinToString("").toInt())
+    print(result.reversed())
 }
