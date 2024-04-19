@@ -12,16 +12,16 @@ fun main() {
         val direction = sc.next()
 
         if (direction == "L") {
-            ((curX - x + 1000)..(curX + 1000)).forEach {
+            ((curX - x + 1000)..(curX + 1000 - 1)).forEach {
                 arr[it]++
             }
+            curX -= x
         } else {
-            ((curX + 1000)..(curX + x + 1000)).forEach {
+            ((curX + 1000)..(curX + x + 1000 - 1)).forEach {
                 arr[it]++
             }
+            curX += x
         }
-
-        curX += x
     }
 
     print(arr.count { it >= 2 })
