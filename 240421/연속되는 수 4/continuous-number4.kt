@@ -12,8 +12,8 @@ fun main() {
     for (i in numbers.indices) {
         if (i == 0 || numbers[i] > numbers[i - 1]) {
             cnt++
-        } else {
             max = max(max, cnt)
+        } else {
             cnt = 1
         }
     }
