@@ -19,7 +19,7 @@ fun main() {
         }
     }
 
-    if (max == 0) {
+    if (max <= 1) {
         print(0)
     } else {
         print(max)
