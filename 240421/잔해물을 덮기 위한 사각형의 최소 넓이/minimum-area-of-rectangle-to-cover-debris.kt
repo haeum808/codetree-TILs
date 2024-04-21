@@ -7,10 +7,10 @@ fun main() {
 
     val (ax1, ay1, ax2, ay2) = sc.nextLine().trim().split(" ").map { it.toInt() }
     val (bx1, by1, bx2, by2) = sc.nextLine().trim().split(" ").map { it.toInt() }
-    var minX = Int.MAX_VALUE
-    var maxX = Int.MIN_VALUE
-    var minY = Int.MAX_VALUE
-    var maxY = Int.MIN_VALUE
+    var minX = 2001
+    var maxX = 0
+    var minY = 2001
+    var maxY = 0
 
     for (i in ax1 + 1000 until ax2 + 1000) {
         for (j in ay1 + 1000 until ay2 + 1000) {
@@ -43,7 +43,10 @@ fun main() {
         }
     }
 
-    val result = (maxX + 1 - minX) * (maxY + 1 - minY)
-
-    print(result)
+    if (minX == 2001 || minY == 2001) {
+        print(0)
+    } else {
+        val result = (maxX + 1 - minX) * (maxY + 1 - minY)
+        print(result)
+    }    
 }
