@@ -11,7 +11,7 @@ fun main() {
     var max = 0
 
     for (i in numbers.indices) {
-        if (numbers[i] > k && (i == 0 || numbers[i] > numbers[i - 1])) {
+        if (numbers[i] > k && (i == 0 || (numbers[i] > numbers[i - 1]) && numbers[i - 1] > k)) {
             cnt++
             max = max(max, cnt)
         } else {
@@ -19,5 +19,9 @@ fun main() {
         }
     }
 
-    print(max)
+    if (cnt == 0) {
+        print(cnt)
+    } else {
+        print(max + 1)
+    }
 }
