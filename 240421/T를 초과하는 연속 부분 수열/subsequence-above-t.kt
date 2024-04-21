@@ -19,5 +19,9 @@ fun main() {
         }
     }
 
-    print(max)
+    if (max == 0) {
+        print(0)
+    } else {
+        print(max)
+    }
 }
