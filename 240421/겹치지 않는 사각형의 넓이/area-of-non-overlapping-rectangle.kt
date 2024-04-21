@@ -10,17 +10,17 @@ fun main() {
     var cnt = 0
 
     for (i in ax1 + 1000..ax2 + 1000 - 1) {
-        for (j in ay1..ay2 - 1) {
+        for (j in ay1 + 1000..ay2 + 1000 - 1) {
             arr2D[i][j] = 1
         }
     }
     for (i in bx1 + 1000..bx2 + 1000 - 1) {
-        for (j in by1..by2 - 1) {
+        for (j in by1 + 1000..by2 + 1000 - 1) {
             arr2D[i][j] = 1
         }
     }
     for (i in mx1 + 1000..mx2 + 1000 - 1) {
-        for (j in my1..my2 - 1) {
+        for (j in my1 + 1000..my2 + 1000 - 1) {
             arr2D[i][j] = 2
         }
     }
