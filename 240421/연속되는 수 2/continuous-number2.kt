@@ -10,12 +10,14 @@ fun main() {
     var max = 0
 
     for (i in numbers.indices) {
-        cnt++
-        if (i == 0 || numbers[i] != numbers[i - 1]) {
+        if (i == 0 || numbers[i] == numbers[i - 1]) {
+            cnt++
+        } else {
             max = max(max, cnt)
-            cnt = 0
+            cnt = 1
         }
     }
+    max = max(max, cnt)
 
     print(max)
 }
