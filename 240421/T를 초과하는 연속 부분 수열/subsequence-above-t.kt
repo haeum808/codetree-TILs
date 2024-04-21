@@ -19,8 +19,8 @@ fun main() {
         }
     }
 
-    if (cnt == 0) {
-        print(cnt)
+    if (max == 0) {
+        print(0)
     } else {
         print(max + 1)
     }
