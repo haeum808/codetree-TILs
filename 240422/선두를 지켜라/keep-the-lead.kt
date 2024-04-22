@@ -3,8 +3,6 @@ import kotlin.math.max
 
 fun main() {
     val sc = Scanner(System.`in`)
-
-
     val aDistances = IntArray(1_000_001)
     val bDistances = IntArray(1_000_001)
     var aIndex = 1
@@ -35,7 +33,7 @@ fun main() {
         }
     }
 
-    var head = if (aDistances[0] > bDistances[0]) {
+    var head = if (aDistances[1] > bDistances[1]) {
         "A"
     }  else {
         "B"
@@ -43,8 +41,6 @@ fun main() {
     var cnt = 0
 
     for (i in 1..1_000_000) {
-        if (aDistances[i] == 0 && bDistances[i] == 0) break
-
         if (head == "A" && bDistances[i] > aDistances[i]) {
             cnt++
             head = "B"
