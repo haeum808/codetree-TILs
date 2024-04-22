@@ -3,10 +3,10 @@ import java.util.Scanner
 fun main() {
     val sc = Scanner(System.`in`)
 
-    var aTime = IntArray(1001)
+    var aTime = IntArray(1_000_001)
     var aTimeIndex = 1
     var aCur = 0
-    var bTime = IntArray(1001)
+    var bTime = IntArray(1_000_001)
     var bTimeIndex = 1
     var bCur = 0
     var result = -1
@@ -48,7 +48,7 @@ fun main() {
         }
     }
 
-    for (i in 1..1000) {
+    for (i in 1..1_000_000) {
         if (aTime[i] != 0 && bTime[i] != 0 && aTime[i] == bTime[i]) {
             result = i
             break
