@@ -49,10 +49,11 @@ fun main() {
     }
 
     for (i in 1..1000) {
-        if (aTime[i] == bTime[i]) {
+        if (aTime[i] != 0 && bTime[i] != 0 && aTime[i] == bTime[i]) {
             result = i
             break
         }
     }
+
     println(result)
 }
