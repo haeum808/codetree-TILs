@@ -15,10 +15,8 @@ fun main() {
         val direction = sc.next()[0]
         val distance = sc.nextInt()
 
-        repeat(distance) {
-            nx += dx[direction]!!
-            ny += dy[direction]!!
-        }
+        nx += dx[direction]!! * distance
+        ny += dy[direction]!! * distance
     }
 
     print("$nx $ny")
