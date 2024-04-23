@@ -39,11 +39,13 @@ fun main() {
     val sortedInfections = infections.sorted()
 
     for (infection in sortedInfections) {
-        if (people[infection.x] == 1 && persistence[infection.x] > 0) {
+        if (people[infection.x] == 1 && persistence[infection.x] > 0 && people[infection.y] == 1 && persistence[infection.y] > 0) {
+            persistence[infection.x] -= 1
+            persistence[infection.y] -= 1
+        } else if (people[infection.x] == 1 && persistence[infection.x] > 0) {
             people[infection.y] = 1
             persistence[infection.x] -= 1
-        }
-        if (people[infection.y] == 1 && persistence[infection.y] > 0) {
+        } else if (people[infection.y] == 1 && persistence[infection.y] > 0) {
             people[infection.x] = 1
             persistence[infection.y] -= 1
         }
