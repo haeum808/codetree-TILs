@@ -5,7 +5,7 @@ fun main() {
 
     val commands = sc.next()
     var dirNum = 3
-    var result = -1
+    var result = 0
     var x = 0
     var y = 0
     val dx = intArrayOf(1, 0, -1, 0)
@@ -18,16 +18,16 @@ fun main() {
             'F' -> { 
                 x += dx[dirNum]
                 y += dy[dirNum]
+
+                if (x == 0 && y == 0) {
+                    print(result)
+                    return
+                }
             }
             'L' -> { dirNum = (dirNum + 3) % 4 }
             'R' -> { dirNum = (dirNum + 1) % 4 }
         }
-
-        if (x == 0 && y == 0) {
-            result = result + 1
-            break
-        }
     }
 
-    print(result)
+    print(-1)
 }
