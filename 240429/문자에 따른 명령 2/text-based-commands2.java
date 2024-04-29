@@ -15,9 +15,10 @@ public class Main {
                 dirnum += 3;
             if(arr[i]=='R')
                 dirnum += 1;
-            if(arr[i]=='F')
+            if(arr[i]=='F') {
                 x += dx[dirnum%4];
                 y += dy[dirnum%4];
+            }
         }
 
         System.out.println(x+ " "+y);
