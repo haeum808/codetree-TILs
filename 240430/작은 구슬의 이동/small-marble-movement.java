@@ -32,12 +32,10 @@ public class Main {
         for(int i=0;i<t;i++) {
             if(xpos<1||xpos>n||ypos<1||ypos>n) {
                 dir = (dir+2)%4;
-                System.out.println("dir = " + dir);
                 i--;
             }
             xpos += dx[dir];
             ypos += dy[dir];
-            System.out.println(xpos+ " "+ ypos);
         }
 
         System.out.println(xpos+ " "+ ypos);
