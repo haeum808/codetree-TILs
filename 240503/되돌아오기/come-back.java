@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     static int[] dx = new int[] {1,0,-1,0};//E S W N
@@ -35,9 +36,6 @@ public class Main {
                 }
             }
         }
-        if(time == n) {
-            System.out.println(-1);
-        }
-
+        System.out.println(-1);
     }
 }
