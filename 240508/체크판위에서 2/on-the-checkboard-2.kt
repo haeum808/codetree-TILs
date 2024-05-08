@@ -38,9 +38,9 @@ fun count(secondTarget: Char): Int {
         for (j in 1 until c - 1) {
             if (arr2D[i][j] == firstTarget) count++ else continue
 
-            for (k in i + 1 until r - 1) {
+            for (k in 1 until r - 1) {
                 
-                for (l in j + 1 until c - 1) {
+                for (l in 1 until c - 1) {
                     if (i < k && j < l && arr2D[k][l] == secondTarget) {
                         
                         if (count == 1) {
