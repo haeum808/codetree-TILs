@@ -32,16 +32,16 @@ fun count(firstTarget: Char): Int {
         'B'
     }
 
-    for (i in 1 until c - 1) {
-        for (j in 1 until r - 1) {
+    for (i in 1 until r - 1) {
+        for (j in 1 until c - 1) {
             var count = 0
 
-            if (arr2D[j][i] == firstTarget) count++ else continue
+            if (arr2D[i][j] == firstTarget) count++ else continue
 
-            for (k in i + 1 until c - 1) {
+            for (k in i + 1 until r - 1) {
 
-                for (l in j + 1 until r - 1) {
-                    if (arr2D[l][k] == secondTarget) {
+                for (l in j + 1 until c - 1) {
+                    if (arr2D[k][l] == secondTarget) {
 
                         if (count == 1) {
                             result++
