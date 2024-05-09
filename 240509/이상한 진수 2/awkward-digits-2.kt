@@ -8,6 +8,6 @@ fun main() {
     if (n.contains('0')) {
         print(Integer.parseInt(n.replaceFirst('0', '1'), 2))
     } else {
-        print(Integer.parseInt(n.replaceFirst('1', '0'), 2))
+        print(Integer.parseInt(n.slice(0 until n.length - 1) + "0", 2))
     }
 }
