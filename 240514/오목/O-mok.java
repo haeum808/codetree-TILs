@@ -24,15 +24,15 @@ public class Main {
         }
         //세로로 이겼을 경우
         for(int i=0;i<14;i++) {
-            for(int j=0;j<19;j++) {
+            for(int j=0;j<14;j++) {
                 if(plate[i][j]==1 && plate[i+1][j]==1 && plate[i+2][j]==1 && plate[i+3][j]==1 && plate[i+4][j]==1){
                     x = i+2;
                     y = j;
                     winnerNum = 1;
                     return true;
                 }
-                if(plate[i][j]==2 && plate[i+1][j+1]==2 && plate[i+2][j]==2 && plate[i+3][j]==2 && plate[i+4][j]==2){
-                    x = i+2;
+                if(plate[i][j]==2 && plate[i+1][j]==2 && plate[i+2][j]==2 && plate[i+3][j]==2 && plate[i+4][j]==2) {
+                    x = i + 2;
                     y = j;
                     winnerNum = 2;
                     return true;
@@ -40,9 +40,8 @@ public class Main {
             }
         }
         //대각선으로 이겼을 경우
-        for(int i=0;i<14;i++) {
+        for(int i=4;i<19;i++) {
             for(int j=0;j<14;j++) {
-
                 if(plate[i][j]==1 && plate[i+1][j+1]==1 && plate[i+2][j+2]==1 && plate[i+3][j+3]==1 && plate[i+4][j+4]==1){
                     x = i+2;
                     y = j+2;
@@ -58,19 +57,20 @@ public class Main {
             }
         }
         for(int i=4;i<19;i++) {
-            for(int j=4;j<19;j++) {
-                if(plate[i][j]==1 & plate[i-1][j-1]==1 &&plate[i-2][j-2]==1 && plate[i-3][j-3]==1 && plate[i-4][j-4]==1) {
+            for(int j=0;j<14;j++) {
+                if(plate[i][j]==1 & plate[i-1][j+1]==1 &&plate[i-2][j+2]==1 && plate[i-3][j+3]==1 && plate[i-4][j+4]==1) {
                     x = i-2;
                     y = j-2;
                     winnerNum = 1;
                     return true;
                 }
-                if(plate[i][j]==1 & plate[i-1][j-1]==2 &&plate[i-2][j-2]==2 && plate[i-3][j-3]==2 && plate[i-4][j-4]==2) {
+                if(plate[i][j]==2 && plate[i-1][j+1]==2 &&plate[i-2][j+2]==2 && plate[i-3][j+3]==2 && plate[i-4][j+4]==2) {
                     x = i-2;
-                    y = j-2;
+                    y = j+2;
                     winnerNum = 2;
                     return true;
                 }
+
             }
         }
         return false;
