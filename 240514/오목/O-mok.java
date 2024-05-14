@@ -7,7 +7,7 @@ public class Main {
     public static boolean checkWin(int[][] plate) {
         //가로로 이겼을 경우
         for(int i=0;i<19;i++) {
-            for(int j=0;j<14;j++) {
+            for(int j=0;j<15;j++) {
                 if(plate[i][j]==1 && plate[i][j+1]==1 && plate[i][j+2]==1 && plate[i][j+3]==1 && plate[i][j+4]==1){
                     x = i;
                     y = j+2;
@@ -24,7 +24,7 @@ public class Main {
         }
         //세로로 이겼을 경우
         for(int i=0;i<14;i++) {
-            for(int j=0;j<14;j++) {
+            for(int j=0;j<19;j++) {
                 if(plate[i][j]==1 && plate[i+1][j]==1 && plate[i+2][j]==1 && plate[i+3][j]==1 && plate[i+4][j]==1){
                     x = i+2;
                     y = j;
@@ -40,8 +40,8 @@ public class Main {
             }
         }
         //대각선으로 이겼을 경우
-        for(int i=0;i<14;i++) {
-            for(int j=0;j<14;j++) {
+        for(int i=0;i<15;i++) {
+            for(int j=0;j<15;j++) {
                 if(plate[i][j]==1 && plate[i+1][j+1]==1 && plate[i+2][j+2]==1 && plate[i+3][j+3]==1 && plate[i+4][j+4]==1){
                     x = i+2;
                     y = j+2;
@@ -57,10 +57,10 @@ public class Main {
             }
         }
         for(int i=4;i<19;i++) {
-            for(int j=0;j<14;j++) {
+            for(int j=0;j<15;j++) {
                 if(plate[i][j]==1 & plate[i-1][j+1]==1 &&plate[i-2][j+2]==1 && plate[i-3][j+3]==1 && plate[i-4][j+4]==1) {
                     x = i-2;
-                    y = j-2;
+                    y = j+2;
                     winnerNum = 1;
                     return true;
                 }
