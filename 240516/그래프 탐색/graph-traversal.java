@@ -8,23 +8,23 @@ public class Main {
         //graph reset
         public Graph(int nodes) {
             adilists = new ArrayList<>();
-            visited = new boolean[nodes];
-            for(int i=0;i<nodes;i++) {
+            visited = new boolean[nodes+1];
+            for(int i=0;i<=nodes;i++) {
                 adilists.add(new ArrayList<>());
             }
         }
         //add nodes
         public void addEdges(int src, int dest) {
             adilists.get(src).add(dest);
+            adilists.get(dest).add(src);
         }
         public void DFS(int vertex) {
             visited[vertex] = true;
-
+            count++;
             List<Integer> nodes = adilists.get(vertex);
             for(Integer node: nodes) {
                 if(!visited[node]) {
                     DFS(node);
-                    count++;
                 }
 
             }
@@ -44,7 +44,7 @@ public class Main {
             int y = sc.nextInt();
             graph.addEdges(x,y);
         }
-        graph.DFS(1);
-        System.out.println(graph.count);
+        graph.DFS(2);
+        System.out.println(graph.count-1);
     }
 }
