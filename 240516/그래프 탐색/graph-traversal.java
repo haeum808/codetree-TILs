@@ -1,32 +1,29 @@
 import java.util.*;
 public class Main {
     public static class Graph {
-        private List<List<Integer>> adilists;
+        private boolean[][] adjMatrix;
         private boolean[] visited;
-        private int count =0;
-
+        private int numVertices;
+        private int count = 0;
         //graph reset
-        public Graph(int nodes) {
-            adilists = new ArrayList<>();
-            visited = new boolean[nodes+1];
-            for(int i=0;i<=nodes;i++) {
-                adilists.add(new ArrayList<>());
-            }
+        public Graph(int numVertices) {
+            this.numVertices = numVertices;
+            adjMatrix = new boolean[numVertices+1][numVertices+1];
+            visited = new boolean[numVertices+1];
         }
-        //add nodes
-        public void addEdges(int src, int dest) {
-            adilists.get(src).add(dest);
-            adilists.get(dest).add(src);
+        //add edges
+        public void addEdges(int i, int j) {
+            adjMatrix[i][j] = true;
+            adjMatrix[j][i] = true;
         }
-        public void DFS(int vertex) {
+        //dfs
+        public void dfs(int vertex) {
             visited[vertex] = true;
             count++;
-            List<Integer> nodes = adilists.get(vertex);
-            for(Integer node: nodes) {
-                if(!visited[node]) {
-                    DFS(node);
+            for(int i=0;i<=numVertices;i++) {
+                if(adjMatrix[vertex][i] && !visited[i]) {
+                    dfs(i);
                 }
-
             }
         }
     }
@@ -44,7 +41,7 @@ public class Main {
             int y = sc.nextInt();
             graph.addEdges(x,y);
         }
-        graph.DFS(2);
+        graph.dfs(1);
         System.out.println(graph.count-1);
     }
 }
