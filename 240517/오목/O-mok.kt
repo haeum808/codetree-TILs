@@ -4,8 +4,8 @@ fun main() {
     val sc = Scanner(System.`in`)
 
     val omokBoard = Array(19) { IntArray(19) { sc.nextInt() } }
-    val dx = intArrayOf(0, 1, -1, -1, 1, 1, 0, 0)
-    val dy = intArrayOf(1, -1, 1, -1, 1, -1, 0, -1)
+    val dx = intArrayOf(0, 1, -1, -1, 1, 1, -1, 0)
+    val dy = intArrayOf(1, 0, 1, -1, 1, -1, 0, -1)
 
     for (i in 0 until 19) {
         for (j in 0 until 19) {
