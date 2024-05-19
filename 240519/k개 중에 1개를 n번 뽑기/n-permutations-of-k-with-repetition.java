@@ -23,7 +23,7 @@ public class Main {
         int k = sc.nextInt();
         int n = sc.nextInt();
 
-        int[] arr = new int[k];
+        int[] arr = new int[n];
         backTracking(k,n,0,arr);
     }
 }
