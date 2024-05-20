@@ -40,6 +40,7 @@ public class Main {
                 grid[i][j] = sc.nextInt();
             }
         }
+        visited[0][0] = true;
         dfs(0, 0);
         System.out.println(answer);
     }
