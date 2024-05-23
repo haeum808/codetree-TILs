@@ -10,7 +10,11 @@ fun main() {
         val command = sc.next()
 
         when (command) {
-            "add" -> { hashMap[sc.nextInt()] = sc.nextInt() }
+            "add" -> {
+                val key = sc.nextInt()
+                val value = sc.nextInt()
+            }
+
             "find" -> {
                 val key = sc.nextInt()
                 if (hashMap.containsKey(key)) {
@@ -19,7 +23,11 @@ fun main() {
                     println("None")
                 }
             }
-            "remove" -> { hashMap.remove(sc.nextInt()) }
+
+            "remove" -> {
+                val key = sc.nextInt()
+                hashMap.remove(key)
+            }
         }
     }
 }
