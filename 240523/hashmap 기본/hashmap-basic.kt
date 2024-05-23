@@ -13,6 +13,7 @@ fun main() {
             "add" -> {
                 val key = sc.nextInt()
                 val value = sc.nextInt()
+                hashMap[key] = value
             }
 
             "find" -> {
