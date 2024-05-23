@@ -16,6 +16,6 @@ fun main() {
     repeat(m) {
         val k = sc.nextInt()
 
-        print("${hashMap[k] ?: 0} ")
+        print("${hashMap.getOrDefault(k, 0)} ")
     }
 }
