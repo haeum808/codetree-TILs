@@ -52,9 +52,9 @@ public class Main {
                 for (int j = 0; j < n; j++) {
                     if(!visited[i][j] && arr[i][j] ==k){
                         int dfsCount = dfs(i, j, k);
+                        curSize = Math.max(curSize, dfsCount);
                         if (dfsCount >= 4) {
                             totalBlock++;
-                            curSize = Math.max(curSize, dfsCount);
                         }
                     }
                 }
