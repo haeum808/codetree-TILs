@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        List<Integer> results = new ArrayList<>();
+        List<Long> results = new ArrayList<>();
         generateNumbers(results, 0, n);
         int count = 0;
         String str1 = "1";
@@ -14,8 +14,8 @@ public class Main {
         String str3 = "333";
         String str4 = "4444";
         for (int i = 0; i < results.size(); i++) {
-            Integer integer = results.get(i);
-            String str = integer.toString();
+            long num = results.get(i);
+            String str = Long.toString(num);
             while (str.length() > 0) {
                 if (str.startsWith(str4)) {
                     str = str.substring(4);
@@ -34,9 +34,10 @@ public class Main {
             }
         }
         System.out.println(count);
+
     }
 
-    public static void generateNumbers(List<Integer> list, int currentNumber, int length) {
+    public static void generateNumbers(List<Long> list, long currentNumber, int length) {
         if (length == 0) {
             list.add(currentNumber);
             return;
