@@ -11,12 +11,8 @@ fun main() {
     arr2D = Array(n) { IntArray(n) { sc.nextInt() } }
     var result = 0
 
-    for (i in 0 until n) {
-        if (i + 2 > n) continue
-
-        for (j in 0 until n) {
-            if (j + 2 > n) continue
-
+    for (i in 0 until n - 2) {
+        for (j in 0 until n - 2) {
             val count = count(i, j)
             result = max(result, count)
         }
@@ -28,8 +24,8 @@ fun main() {
 fun count(i: Int, j: Int): Int {
     var count = 0
 
-    for (x in i until n) {
-        for (y in j until n) {
+    for (x in i .. i + 2) {
+        for (y in j .. j + 2) {
             if (arr2D[x][y] == 1) count++
         }
     }
