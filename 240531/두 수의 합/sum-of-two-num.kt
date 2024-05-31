@@ -17,7 +17,11 @@ fun main() {
     for (i in hashMap.keys) {
         for (j in hashMap.keys) {
             if (i + j == k) {
-                result += hashMap[i]?.times(hashMap[j]!!) ?: return
+                result += if (hashMap[i] == 1 && hashMap[j] == 1) {
+                    1
+                } else {
+                    hashMap[i]?.times(hashMap[j]!! - 1) ?: return
+                }
             }
         }
     }
