@@ -11,20 +11,10 @@ fun main() {
 
     repeat(n) {
         val num = sc.nextLong()
+        val complement = k - num
+        result += hashMap.getOrDefault(complement, 0)
         hashMap[num] = hashMap.getOrDefault(num, 0) + 1
     }
 
-    for (i in hashMap.keys) {
-        for (j in hashMap.keys) {
-            if (i + j == k) {
-                result += if (hashMap[i] == 1 && hashMap[j] == 1) {
-                    1
-                } else {
-                    hashMap[i]?.times(hashMap[j]!! - 1) ?: return
-                }
-            }
-        }
-    }
-
-    print(result / 2)
+    print(result)
 }
