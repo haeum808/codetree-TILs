@@ -5,20 +5,22 @@ fun main() {
 
     var result = 0
     val n = sc.nextInt()
-    val k = sc.nextInt()
+    val k = sc.nextLong()
 
-    val hashMap: HashMap<Int, Int> = hashMapOf()
+    val hashMap: HashMap<Long, Int> = hashMapOf()
 
     repeat(n) {
-        val num = sc.nextInt()
-        hashMap[it] = num
+        val num = sc.nextLong()
+        hashMap[num] = hashMap.getOrDefault(num, 0) + 1
     }
 
-    for (i in 0 until n) {
-        for (j in i + 1 until n) {
-            if(hashMap[i]?.plus(hashMap[j]!!) == k) result++
+    for (i in hashMap.keys) {
+        for (j in hashMap.keys) {
+            if (i + j == k) {
+                result += hashMap[i]?.times(hashMap[j]!!) ?: return
+            }
         }
     }
 
-    print(result)
+    print(result / 2)
 }
