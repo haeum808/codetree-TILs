@@ -2,7 +2,7 @@ import java.util.Scanner
 import kotlin.math.max
 
 var n = 0
-var arr2D = Array(1) { IntArray(1) }
+lateinit var arr2D: Array<IntArray>
 
 fun main() {
     val sc = Scanner(System.`in`)
