@@ -19,7 +19,7 @@ fun countVertical(): Int {
     var result = 0
 
     for (i in 0 until n) {
-        var count = 0
+        var count = 1
         var temp = 0
 
         for (j in 0 until n - 1) {
@@ -33,7 +33,9 @@ fun countVertical(): Int {
             count = max(count, temp + 1)
         }
 
-        if (count >= m - 1) result++
+        if (count >= m) {
+            result++
+        }
     }
 
     return result
@@ -43,7 +45,7 @@ fun countHorizontal(): Int {
     var result = 0
 
     for (i in 0 until n) {
-        var count = 0
+        var count = 1
         var temp = 0
 
         for (j in 0 until n - 1) {
@@ -57,7 +59,9 @@ fun countHorizontal(): Int {
             count = max(count, temp + 1)
         }
 
-        if (count >= m - 1) result++
+        if (count >= m) {
+            result++
+        }
     }
 
     return result
