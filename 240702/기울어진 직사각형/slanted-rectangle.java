@@ -1,10 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     static int[][] grid;
     static boolean[][] visited;
     static int n;
-
     public static boolean inRange(int x, int y) {
         return 0 <= x && x < n && 0 <= y && y < n;
     }
@@ -27,6 +28,12 @@ public class Main {
                 } else {
                     tempX = tempX + 1;
                     tempY = tempY + 1;
+                }
+                if((tempX == n-1 && tempY == 0) || (tempX==n-1 && tempY == n-1)
+                        ||(tempX ==0 && tempY ==n-1) ||(tempX==0 && tempY==0))
+                    break;
+                if (num == 3 && inRange(tempX+1,tempY+1)&&(visited[tempX - 1][tempY + 1] || visited[tempX][tempY + 1] || visited[tempX + 1][tempY + 1])) {
+                    break;
                 }
                 if (inRange(tempX, tempY) && !visited[tempX][tempY]) {
                     x = tempX;
@@ -60,6 +67,7 @@ public class Main {
         } else {
             for (int i = 2; i < n; i++) {
                 for (int j = 1; j < n; j++) {
+                    
                     resetVisited();
                     visited[i][j] = true;
                     int count = move(i, j);
