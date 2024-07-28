@@ -1,15 +1,17 @@
-import java.util.StringTokenizer
+import java.util.Scanner
 
 fun main() {
-    val n = readLine()!!.toInt()
+    val sc = Scanner(System.`in`)
+
+    val n = sc.nextInt()
     val v = ArrayList<Int>()
 
     repeat(n) {
-        val input = StringTokenizer(readLine()!!)
+        val input = sc.next()
 
-        when(input.nextToken()) {
+        when(input) {
             "push_back" -> {
-                v.add(input.nextToken().toInt())
+                v.add(sc.nextInt())
             }
             "pop_back" -> {
                 v.removeAt(v.size - 1)
@@ -18,7 +20,7 @@ fun main() {
                 println("${v.size}")
             }
             "get" -> {
-                println("${v[input.nextToken().toInt() - 1]}")
+                println("${v[sc.nextInt() - 1]}")
             }
         }
     }
