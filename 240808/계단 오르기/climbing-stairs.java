@@ -15,8 +15,9 @@ public class Main {
         memo[4] = 2; // 6 -> 2
         memo[5] = 3; // 7 -> 3
         for (int i = 5; i <= n; i++) {
-            memo[i] = memo[i - 3] + memo[i - 2];
+            memo[i] = (memo[i - 3] + memo[i - 2]) % 10007;
         }
-        System.out.println(memo[n-2]);
+        System.out.println(memo[n - 2]);
+        // 817 -> 답 7409
     }
 }
