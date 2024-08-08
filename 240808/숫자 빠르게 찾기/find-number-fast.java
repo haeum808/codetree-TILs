@@ -9,6 +9,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        Arrays.sort(arr);
         int[] find = new int[m];
         int count =1;
         for (int i = 0; i < m; i++) {
