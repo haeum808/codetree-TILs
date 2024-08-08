@@ -11,16 +11,15 @@ public class Main {
         }
         Arrays.sort(arr);
         int[] find = new int[m];
-        int count =1;
         for (int i = 0; i < m; i++) {
-            boolean check = false;
             find[i] = sc.nextInt();
             int left = 0;
             int right = n-1;
+            int index = -1;
             while (left <= right) {
                 int mid = (left + right) / 2;
                 if (find[i] == arr[mid]) {
-                    check = true;
+                    index = mid + 1; 
                     break;
                 }
                 if (find[i] > arr[mid]) {
@@ -30,12 +29,7 @@ public class Main {
                     right = mid-1;
                 }
             }
-            if (check) {
-                System.out.println(count);
-                count++;
-            } else {
-                System.out.println(-1);
-            }
+            System.out.println(index);
         }
     }
 }
