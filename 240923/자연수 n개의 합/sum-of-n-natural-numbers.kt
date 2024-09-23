@@ -5,7 +5,7 @@ fun main() {
     var max = 0L
 
     while (left < right) {
-        val mid = (left + right) / 2
+        val mid = (left + right) / 2L
 
         if (mid * (mid + 1) / 2 <= s) {
             left += 1
