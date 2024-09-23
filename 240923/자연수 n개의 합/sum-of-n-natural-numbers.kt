@@ -1,7 +1,7 @@
 fun main() {
     val s = readln().toLong()
     var left = 1L
-    var right = s
+    var right = 2000000000L
     var max = 0L
 
     while (left <= right) {
