@@ -7,7 +7,7 @@ fun main() {
     while (left <= right) {
         val mid = (left + right) / 2L
 
-        if (mid * (mid + 1) / 2 <= s) {
+        if (mid * (mid + 1) / 2 < s) {
             left += 1
             max = maxOf(mid, max)
         } else {
