@@ -1,10 +1,10 @@
 fun main() {
     val s = readln().toLong()
-    var left = 1L
+    var left = 1
     var right = s
     var max = 0L
 
-    while (left <= right) {
+    while (left < right) {
         val mid = (left + right) / 2
 
         if (mid * (mid + 1) / 2 <= s) {
