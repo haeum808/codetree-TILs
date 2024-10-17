@@ -26,7 +26,7 @@ fun main() {
         edges[x].add(y)
     }
 
-    for(i in 1 until n) {
+    for(i in n downTo 1) {
         if(isVisited[i].not()) {
             isVisited[i] = true
             dfs(i)
