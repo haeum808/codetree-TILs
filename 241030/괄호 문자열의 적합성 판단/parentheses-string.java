@@ -9,7 +9,7 @@ public class Main {
             if(arr[i] == '(') {
                 stack.push('(');
             } else {
-                if(stack.peek() == '(') {
+                if(!stack.isEmpty() && stack.peek() == '(') {
                     stack.pop();
                 } else {
                     break;
