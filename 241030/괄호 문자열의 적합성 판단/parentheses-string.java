@@ -11,6 +11,8 @@ public class Main {
             } else {
                 if(stack.peek() == '(') {
                     stack.pop();
+                } else {
+                    break;
                 }
             }
         }
