@@ -5,15 +5,13 @@ public class Main {
         String str = sc.nextLine();
         char[] arr = str.toCharArray();
         Stack<Character> stack = new Stack<>();
-        for(int i=0;i<arr.length;i++) {
-            if(arr[i] == '(') {
+        for (char c : arr) {
+            if (c == '(') {
                 stack.push('(');
             } else {
-                if(!stack.isEmpty() && stack.peek() == '(') {
+                if (!stack.isEmpty() && stack.peek() == '(') {
                     stack.pop();
-                } else {
-                    break;
-                }
+                } 
             }
         }
         if(stack.isEmpty())
