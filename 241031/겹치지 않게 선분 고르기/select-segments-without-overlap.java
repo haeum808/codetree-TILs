@@ -17,7 +17,7 @@ public class Main {
         int answer = 0;
         int lastElement = 0;
         for (int i = 0; i < n; i++) {
-            if (lines[i][0] >= lastElement) {
+            if (lines[i][0] > lastElement) {
                 answer++;
                 lastElement = lines[i][1];
             }
