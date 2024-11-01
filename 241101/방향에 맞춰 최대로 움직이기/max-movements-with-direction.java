@@ -15,6 +15,9 @@ public class Main {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{x, y});
         int count = 0;
+        if (n == 1) {
+            return 0;
+        }
 
         while (!queue.isEmpty()) {
             int size = queue.size();
